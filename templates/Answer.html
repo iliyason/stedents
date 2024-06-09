@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='css/Answer.css') }}">{% endblock %}
+{% block content %}
+<button class="glow-on-hover" onclick="Home()">Главная</button>
+
+    <section id="faq">
+
+        <!-- Heading -->
+        <div class="faq-heading">
+            <h3>Вопросы и ответы</h3>
+        </div>
+
+        <!-- Container -->
+        <div class="faq-content">
+            <!-- faq -->
+            <div class="faq-box-container">
+
+                <div class="faq-box">
+                    <div class="faq-box-question">
+                            <h4>{% block question_one %} {% endblock %}</h4>
+                            <span class="faq-box-icon"></span>
+                    </div>
+                    <div class="faq-box-answer" >
+                        <p>{% block answer_one %} {% endblock %}</p>
+                    </div>
+                </div>
+
+            <div class="faq-box">
+                    <div class="faq-box-question">
+                            <h4>{% block question_two %} {% endblock %}</h4>
+                            <span class="faq-box-icon"></span>
+                    </div>
+                    <div class="faq-box-answer" >
+                        <p>{% block answer_two %} {% endblock %}</p>
+                    </div>
+                </div>
+
+              <div class="faq-box">
+                    <div class="faq-box-question">
+                            <h4>{% block question_three %} {% endblock %}</h4>
+                            <span class="faq-box-icon"></span>
+                    </div>
+                    <div class="faq-box-answer" >
+                        <p>{% block answer_three %} {% endblock %}</p>
+                    </div>
+                </div>
+
+              <div class="faq-box">
+                    <div class="faq-box-question">
+                            <h4>{% block question_four %} {% endblock %}</h4>
+                            <span class="faq-box-icon"></span>
+                    </div>
+                    <div class="faq-box-answer" >
+                        <p>{% block answer_four %} {% endblock %}</p>
+                    </div>
+                </div>
+
+              <div class="faq-box">
+                    <div class="faq-box-question ">
+                            <h4>{% block question_five %} {% endblock %}</h4>
+                            <span class="faq-box-icon"></span>
+                    </div>
+                    <div class="faq-box-answer" >
+                        <p>{% block answer_five %} {% endblock %}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <script>
+var faq = document.getElementsByClassName("faq-box-question");
+var i;
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+        /* Toggle between hiding and showing the active panel */
+        var body = this.nextElementSibling;
+        if (body.style.maxHeight === "100px") {
+            body.style.maxHeight = "0px";
+        } else {
+            body.style.maxHeight = "100px";
+        }
+    });
+}
+
+function Home() {
+  window.location.href = "/";
+}
+    </script>
+
+
+{% endblock %}

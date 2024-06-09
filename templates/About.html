@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='css/About.css') }}">{% endblock %}
+{% block content %}
+<button class="glow-on-hover" onclick="Home()">Главная</button>
+
+
+<div class="responsive-container-block bigContainer">
+  <div class="responsive-container-block Container">
+    <div class="responsive-container-block leftSide">
+      <p class="text-blk heading">
+        "Будни студента"
+      </p>
+      <p class="text-blk subHeading">
+        "Будни студента" Игра, приближенная к реальности, которая позволит игроку узнать более подробно о структуре и функционировании техникума.
+      </p>
+    </div>
+    <div class="responsive-container-block rightSide">
+      <img class="number1img" src="https://compuzilla.ru/wp-content/uploads/wp8038843.jpg">
+      <img class="number2img" src="https://i.playground.ru/p/JYJ2wTLrSfby8btw8nRuNA.jpeg">
+      <img class="number3img" src="https://cdna.artstation.com/p/assets/images/images/049/159/194/large/wiktor-ohman-3-copy.jpg">
+      <img class="number5img" src="https://cq.ru/img/f/e/2023/11/08/17818.jpg">
+      <iframe allowfullscreen="allowfullscreen" class="number4vid" poster="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/b242.png" src="https://www.youtube.com/embed/svg%3E?">
+      </iframe>
+      <img class="number7img" src="https://cdna.artstation.com/p/assets/images/images/020/995/706/large/alexandre-martin-painting55.jpg?1569965590">
+      <img class="number6img" src="https://i.playground.ru/p/QnwBo3BTCWsQsLSZzbuvzg.jpeg">
+    </div>
+  </div>
+</div>
+
+<script !src="">
+  function Home() {
+  window.location.href = "/";
+}
+</script>
+{% endblock %}

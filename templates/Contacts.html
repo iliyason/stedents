@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='css/Contacts.css') }}">{% endblock %}
+{% block content %}
+<button class="glow-on-hover" onclick="Home()">Главная</button>
+
+<div class="container">
+	<div class="front side">
+		<div class="content">
+			<h1>Разработчик "Будни студента"</h1>
+			<p>P.S. Ответ ждать долго</p>
+		</div>
+	</div>
+	<div class="back side">
+		<div class="content">
+			<h1>Контакты</h1>
+				<div class="flex-center">
+					<a href="https://vk.com/"><i class="fa fa-brands fa-vk fa-4x icon-3d"></i></a>
+					<a href="https://webk.telegram.org/"><i class="fa fa-4x icon-3d fa-brands fa-telegram"></i></a>
+				  <i class="fa fa-instagram fa-4x icon-3d"></i>
+				  <i class="fa fa-whatsapp fa-4x icon-3d"></i>
+				</div>
+		</div>
+	</div>
+
+</div>
+
+
+<script>
+    function Home() {
+  window.location.href = "/";
+}
+function MPET() {
+  window.location.href = "https://mgpet.ru/";
+}
+</script>
+{% endblock %}

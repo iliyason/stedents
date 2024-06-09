@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='css/DownloadStyle.css') }}">{% endblock %}
+{% block content %}
+<a class="animated-btn text-white" href="/"><i class="fa-solid fa-house"></i></a>
+
+<div class='animation-example'>
+    <div class='item'>
+        <div class='line'></div>
+        <div class='dot'></div>
+        <div class='circle'></div>
+    </div>
+    <div class='item'>
+        <div class='line'></div>
+        <div class='dot'></div>
+        <div class='circle'></div>
+    </div>
+    <div class='item'>
+        <div class='line'></div>
+        <div class='dot'></div>
+        <div class='circle'></div>
+    </div>
+    <div class='item'>
+        <div class='line'></div>
+        <div class='dot'></div>
+        <div class='circle'></div>
+    </div>
+    <div class='item -type2'>
+        <div class='line'></div>
+        <div class='dot'></div>
+        <div class='circle'></div>
+    </div>
+    <div class='item -type2'>
+        <div class='line'></div>
+        <div class='dot'></div>
+        <div class='circle'></div>
+    </div>
+    <div class='item -type2'>
+        <div class='line'></div>
+        <div class='dot'></div>
+        <div class='circle'></div>
+    </div>
+    <div class='item -type2'>
+        <div class='line'></div>
+        <div class='dot'></div>
+        <div class='circle'></div>
+    </div>
+    <div class='center' onclick="Download()">
+        <div class='circle'></div>
+        <div class='circle'></div>
+        <div class='circle'></div>
+        <i class="fa-solid fa-download"></i>
+    </div>
+</div>
+
+<script>
+function Download() {
+  window.location.href = "https://disk.yandex.ru/d/vlAJV7MRXL6ilw";
+}
+</script>
+{% endblock %}
